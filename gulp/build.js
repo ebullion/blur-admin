@@ -19,7 +19,7 @@ gulp.task('partials', function () {
       quotes: true
     }))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'BlurAdmin',
+      module: 'admin',
       root: 'app'
     }))
     .pipe(gulp.dest(conf.paths.tmp + '/partials/'));
@@ -33,7 +33,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     addRootSlash: false
   };
 
-  var htmlFilter = $.filter('*.html', { restore: true, dot:true});
+  var htmlFilter = $.filter('**/*.html', { restore: true, dot:true});
   var jsFilter = $.filter('**/*.js', { restore: true, dot:true});
   var cssFilter = $.filter('**/*.css', { restore: true, dot:true});
   var assets;

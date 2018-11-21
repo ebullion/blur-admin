@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.tables')
+  angular.module('admin.pages.tables')
       .controller('TablesPageCtrl', TablesPageCtrl);
 
   /** @ngInject */

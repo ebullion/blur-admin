@@ -5,100 +5,186 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.dashboard')
+  angular.module('admin.pages.dashboard')
       .controller('DashboardMapCtrl', DashboardMapCtrl);
 
   /** @ngInject */
   function DashboardMapCtrl(baConfig, layoutPaths) {
     var layoutColors = baConfig.colors;
-    var map = AmCharts.makeChart('amChartMap', {
-      type: 'map',
-      theme: 'blur',
-      zoomControl: { zoomControlEnabled: false, panControlEnabled: false },
+      var map = AmCharts.makeChart( "amChartMap", {
+          "type": "map",
+          "theme": "light",
+          "colorSteps": 10,
 
-      dataProvider: {
-        map: 'worldLow',
-        zoomLevel: 3.5,
-        zoomLongitude: 10,
-        zoomLatitude: 52,
-        areas: [
-          { title: 'Austria', id: 'AT', color: layoutColors.primary, customData: '1 244', groupId: '1'},
-          { title: 'Ireland', id: 'IE', color: layoutColors.primary, customData: '1 342', groupId: '1'},
-          { title: 'Denmark', id: 'DK', color: layoutColors.primary, customData: '1 973', groupId: '1'},
-          { title: 'Finland', id: 'FI', color: layoutColors.primary, customData: '1 573', groupId: '1'},
-          { title: 'Sweden', id: 'SE', color: layoutColors.primary, customData: '1 084', groupId: '1'},
-          { title: 'Great Britain', id: 'GB', color: layoutColors.primary, customData: '1 452', groupId: '1'},
-          { title: 'Italy', id: 'IT', color: layoutColors.primary, customData: '1 321', groupId: '1'},
-          { title: 'France', id: 'FR', color: layoutColors.primary, customData: '1 112', groupId: '1'},
-          { title: 'Spain', id: 'ES', color: layoutColors.primary, customData: '1 865', groupId: '1'},
-          { title: 'Greece', id: 'GR', color: layoutColors.primary, customData: '1 453', groupId: '1'},
-          { title: 'Germany', id: 'DE', color: layoutColors.primary, customData: '1 957', groupId: '1'},
-          { title: 'Belgium', id: 'BE', color: layoutColors.primary, customData: '1 011', groupId: '1'},
-          { title: 'Luxembourg', id: 'LU', color: layoutColors.primary, customData: '1 011', groupId: '1'},
-          { title: 'Netherlands', id: 'NL', color: layoutColors.primary, customData: '1 213', groupId: '1'},
-          { title: 'Portugal', id: 'PT', color: layoutColors.primary, customData: '1 291', groupId: '1'},
-          { title: 'Lithuania', id: 'LT', color: layoutColors.successLight, customData: '567', groupId: '2'},
-          { title: 'Latvia', id: 'LV', color: layoutColors.successLight, customData: '589', groupId: '2'},
-          { title: 'Czech Republic ', id: 'CZ', color: layoutColors.successLight, customData: '785', groupId: '2'},
-          { title: 'Slovakia', id: 'SK', color: layoutColors.successLight, customData: '965', groupId: '2'},
-          { title: 'Estonia', id: 'EE', color: layoutColors.successLight, customData: '685', groupId: '2'},
-          { title: 'Hungary', id: 'HU', color: layoutColors.successLight, customData: '854', groupId: '2'},
-          { title: 'Cyprus', id: 'CY', color: layoutColors.successLight, customData: '754', groupId: '2'},
-          { title: 'Malta', id: 'MT', color: layoutColors.successLight, customData: '867', groupId: '2'},
-          { title: 'Poland', id: 'PL', color: layoutColors.successLight, customData: '759', groupId: '2'},
-          { title: 'Romania', id: 'RO', color: layoutColors.success, customData: '302', groupId: '3'},
-          { title: 'Bulgaria', id: 'BG', color: layoutColors.success, customData: '102', groupId: '3'},
-          { title: 'Slovenia', id: 'SI', color: layoutColors.danger, customData: '23', groupId: '4'},
-          { title: 'Croatia', id: 'HR', color: layoutColors.danger, customData: '96', groupId: '4'}
-        ]
-      },
-
-      areasSettings: {
-        rollOverOutlineColor: layoutColors.border,
-        rollOverColor: layoutColors.primaryDark,
-        alpha: 0.8,
-        unlistedAreasAlpha: 0.2,
-        unlistedAreasColor: layoutColors.defaultText,
-        balloonText: '[[title]]: [[customData]] users'
-      },
-
-
-      legend: {
-        width: '100%',
-        marginRight: 27,
-        marginLeft: 27,
-        equalWidths: false,
-        backgroundAlpha: 0.3,
-        backgroundColor: layoutColors.border,
-        borderColor: layoutColors.border,
-        borderAlpha: 1,
-        top: 362,
-        left: 0,
-        horizontalGap: 10,
-        data: [
-          {
-            title: 'over 1 000 users',
-            color: layoutColors.primary
+          "dataProvider": {
+              "map": "usaLow",
+              "areas": [ {
+                  "id": "US-AL",
+                  "value": 4447100
+              }, {
+                  "id": "US-AK",
+                  "value": 626932
+              }, {
+                  "id": "US-AZ",
+                  "value": 5130632
+              }, {
+                  "id": "US-AR",
+                  "value": 2673400
+              }, {
+                  "id": "US-CA",
+                  "value": 33871648
+              }, {
+                  "id": "US-CO",
+                  "value": 4301261
+              }, {
+                  "id": "US-CT",
+                  "value": 3405565
+              }, {
+                  "id": "US-DE",
+                  "value": 783600
+              }, {
+                  "id": "US-FL",
+                  "value": 15982378
+              }, {
+                  "id": "US-GA",
+                  "value": 8186453
+              }, {
+                  "id": "US-HI",
+                  "value": 1211537
+              }, {
+                  "id": "US-ID",
+                  "value": 1293953
+              }, {
+                  "id": "US-IL",
+                  "value": 12419293
+              }, {
+                  "id": "US-IN",
+                  "value": 6080485
+              }, {
+                  "id": "US-IA",
+                  "value": 2926324
+              }, {
+                  "id": "US-KS",
+                  "value": 2688418
+              }, {
+                  "id": "US-KY",
+                  "value": 4041769
+              }, {
+                  "id": "US-LA",
+                  "value": 4468976
+              }, {
+                  "id": "US-ME",
+                  "value": 1274923
+              }, {
+                  "id": "US-MD",
+                  "value": 5296486
+              }, {
+                  "id": "US-MA",
+                  "value": 6349097
+              }, {
+                  "id": "US-MI",
+                  "value": 9938444
+              }, {
+                  "id": "US-MN",
+                  "value": 4919479
+              }, {
+                  "id": "US-MS",
+                  "value": 2844658
+              }, {
+                  "id": "US-MO",
+                  "value": 5595211
+              }, {
+                  "id": "US-MT",
+                  "value": 902195
+              }, {
+                  "id": "US-NE",
+                  "value": 1711263
+              }, {
+                  "id": "US-NV",
+                  "value": 1998257
+              }, {
+                  "id": "US-NH",
+                  "value": 1235786
+              }, {
+                  "id": "US-NJ",
+                  "value": 8414350
+              }, {
+                  "id": "US-NM",
+                  "value": 1819046
+              }, {
+                  "id": "US-NY",
+                  "value": 18976457
+              }, {
+                  "id": "US-NC",
+                  "value": 8049313
+              }, {
+                  "id": "US-ND",
+                  "value": 642200
+              }, {
+                  "id": "US-OH",
+                  "value": 11353140
+              }, {
+                  "id": "US-OK",
+                  "value": 3450654
+              }, {
+                  "id": "US-OR",
+                  "value": 3421399
+              }, {
+                  "id": "US-PA",
+                  "value": 12281054
+              }, {
+                  "id": "US-RI",
+                  "value": 1048319
+              }, {
+                  "id": "US-SC",
+                  "value": 4012012
+              }, {
+                  "id": "US-SD",
+                  "value": 754844
+              }, {
+                  "id": "US-TN",
+                  "value": 5689283
+              }, {
+                  "id": "US-TX",
+                  "value": 20851820
+              }, {
+                  "id": "US-UT",
+                  "value": 2233169
+              }, {
+                  "id": "US-VT",
+                  "value": 608827
+              }, {
+                  "id": "US-VA",
+                  "value": 7078515
+              }, {
+                  "id": "US-WA",
+                  "value": 5894121
+              }, {
+                  "id": "US-WV",
+                  "value": 1808344
+              }, {
+                  "id": "US-WI",
+                  "value": 5363675
+              }, {
+                  "id": "US-WY",
+                  "value": 493782
+              } ]
           },
-          {
-            title: '500 - 1 000 users',
-            color: layoutColors.successLight
+
+          "areasSettings": {
+              "autoZoom": true
           },
-          {
-            title: '100 - 500 users',
-            color: layoutColors.success
+
+          "valueLegend": {
+              "right": 10,
+              "minValue": "little",
+              "maxValue": "a lot!"
           },
-          {
-            title: '0 - 100 users',
-            color: layoutColors.danger
+
+          "export": {
+              "enabled": true
           }
-        ]
-      },
-      export: {
-        enabled: true
-      },
-      creditsPosition: 'bottom-right',
-      pathToImages: layoutPaths.images.amChart
-    });
+
+      } );
   }
 })();

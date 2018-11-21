@@ -5,21 +5,21 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme')
+  angular.module('admin.theme')
     .config(config);
 
   /** @ngInject */
   function config(baConfigProvider, colorHelper, $provide) {
     $provide.decorator('$uiViewScroll', uiViewScrollDecorator);
-    //baConfigProvider.changeTheme({blur: true});
-    //
-    //baConfigProvider.changeColors({
+    // baConfigProvider.changeTheme({blur: true});
+
+    // baConfigProvider.changeColors({
     //  default: 'rgba(#000000, 0.2)',
     //  defaultText: '#ffffff',
     //  dashboard: {
     //    white: '#ffffff',
     //  },
-    //});
+    // });
   }
 
   /** @ngInject */

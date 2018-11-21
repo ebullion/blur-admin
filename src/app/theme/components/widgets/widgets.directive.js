@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme.components')
+  angular.module('admin.theme.components')
       .directive('widgets', widgets);
 
   /** @ngInject */

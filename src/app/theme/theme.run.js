@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme')
+  angular.module('admin.theme')
     .run(themeRun);
 
   /** @ngInject */
@@ -36,6 +36,7 @@
     }, 7000);
 
     $rootScope.$baSidebarService = baSidebarService;
+
   }
 
 })();

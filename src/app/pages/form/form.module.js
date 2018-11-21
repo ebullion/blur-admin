@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.form', ['ui.select', 'ngSanitize'])
+  angular.module('admin.pages.form', ['ui.select', 'ngSanitize'])
       .config(routeConfig);
 
   /** @ngInject */
@@ -15,7 +15,7 @@
           url: '/form',
           template : '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
           abstract: true,
-          title: 'Form Elements',
+          title: 'Forms',
           sidebarMeta: {
             icon: 'ion-compose',
             order: 250,

@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.maps', [])
+  angular.module('admin.pages.maps', [])
       .config(routeConfig);
 
   /** @ngInject */
@@ -17,7 +17,7 @@
           abstract: true,
           title: 'Maps',
           sidebarMeta: {
-            icon: 'ion-ios-location-outline',
+            icon: 'ion-headphone',
             order: 500,
           },
         })

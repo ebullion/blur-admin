@@ -64,7 +64,10 @@
     "amcharts": {
       "main": [
         "./dist/amcharts/amcharts.js",
+        "./dist/amcharts/themes/light.js",
         "./dist/amcharts/plugins/responsive/responsive.min.js",
+        "./dist/amcharts/plugins/export/export.min.js",
+        "./dist/amcharts/plugins/export/export.css",
         "./dist/amcharts/serial.js",
         "./dist/amcharts/funnel.js",
         "./dist/amcharts/pie.js",
@@ -77,7 +80,7 @@
     "ammap": {
       "main": [
         "./dist/ammap/ammap.js",
-        "./dist/ammap/maps/js/worldLow.js"
+        "./dist/ammap/maps/js/usaLow.js"
       ]
     },
     "bootstrap": {

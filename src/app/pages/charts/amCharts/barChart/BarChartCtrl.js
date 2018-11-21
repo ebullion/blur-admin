@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.charts.amCharts')
+  angular.module('admin.pages.charts.amCharts')
       .controller('BarChartCtrl', BarChartCtrl);
 
   /** @ngInject */
